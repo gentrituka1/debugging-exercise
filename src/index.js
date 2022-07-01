@@ -1,12 +1,13 @@
 const words = [
   'welcome',
-  'Kosova',
+  'kosova',
   'albania',
   'banana',
   'besmir',
-  'JavaScript',
+  'javascript',
   'project',
   'random',
+  'gentrit',
 ]
 
 // STATE
@@ -17,7 +18,7 @@ const state = {
 }
 
 // Pyetjet qe duhet bere:
-// 1. Si te marrim marrim nje fjalen random? state.word
+// 1. Si te marrim nje fjalen random? state.word
 // 2. Si te krijojme hamendsimet? Si behen hamendsimet? state.guesses
 // 3. Numri i hamendsimeve qe duhet te behet dhe a mund te behet ndryshimi i saj? state.maximumNumberOfWrongGuesses
 
