@@ -6,7 +6,7 @@ const words = [
   'besmir',
   'JavaScript',
   'project',
-  '',
+  'random',
 ]
 
 // STATE
