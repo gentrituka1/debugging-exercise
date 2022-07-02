@@ -139,12 +139,19 @@ function renderTheText(){
 }
 
 function createBtn(){
+
+  let btnDiv = document.createElement('div')
+  btnDiv.className = 'btn-div'
+
+
   let btn = document.createElement('button')
+  btn.className = "btn"
   btn.textContent = 'Back to the info!'
   btn.addEventListener('click', function () {
     renderTheText()
   }, {once: true})
-  document.body.append(btn)
+  btnDiv.append(btn)
+  document.body.append(btnDiv)
 }
 
 function render() {

@@ -5,8 +5,7 @@
 }
 
 body {
-  background-color: royalblue;
-
+  background: -webkit-linear-gradient( royalblue, grey);
   display: grid;
   justify-items: center;
   align-content: center;
@@ -72,5 +71,22 @@ button:hover {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+.btn{
+  animation: leftToRight 5s linear infinite;
+}
+@keyframes leftToRight {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(100%);
+  }
+  66%{
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
