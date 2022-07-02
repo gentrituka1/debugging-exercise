@@ -15,7 +15,8 @@ const words = [
 const state = {
   word: getRandomWord(),
   guesses: [],
-  maximumNumberOfWrongGuesses: 5
+  maximumNumberOfWrongGuesses: 5,
+  page: 'info' || 'game'
 }
 
 // Pyetjet qe duhet bere:
@@ -134,15 +135,24 @@ function renderWinOrLostMessage() {
 }
 
 function renderTheText(){
+  document.body.innerHTML = ''
   createSomeUsefulText()
 }
 
+function createBtn(){
+  let btn = document.createElement('button')
+  btn.textContent = 'Back to the info!'
+  btn.addEventListener('click', function () {
+    renderTheText()
+  }, {once: true})
+  document.body.append(btn)
+}
 
 function render() {
   document.body.innerHTML = ''
 
   
-
+  createBtn()
   renderWord()
   renderWrongGuesses()
   renderWinOrLostMessage()
@@ -168,6 +178,7 @@ function createSomeUsefulText(){
   projectButton.className = 'project-button'
   projectButton.textContent = 'Play'
   projectButton.addEventListener('click', function () {
+    state.page = 'game'
     render()
   }, {once: true})
 
