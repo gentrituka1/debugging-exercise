@@ -48,3 +48,29 @@ button:hover {
   background-color: white;
   color: royalblue;
 }
+
+.project-button{
+  all: unset;
+  border: solid 2px white;
+  border-radius: 5px;
+  background-color: white;
+  color: royalblue;
+  font-weight: 800;
+  transition: 0.2s;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+.project-button:hover{
+  background-color: royalblue;
+  color: white;
+  transform: scale(1.25);
+  animation: rotate 0.5s linear;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

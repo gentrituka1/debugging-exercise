@@ -1,7 +1,7 @@
 const words = [
   'welcome',
   'kosova',
-  'albania',
+  'Albania',
   'banana',
   'besmir',
   'javascript',
@@ -9,6 +9,7 @@ const words = [
   'random',
   'gentrit',
 ]
+
 
 // STATE
 const state = {
@@ -25,7 +26,7 @@ const state = {
 // DERIVED STATE
 function getRightGuesses() {
   return state.guesses.filter(function (letter) {
-    return state.word.includes(letter)
+    return state.word.toLowerCase().includes(letter.toLowerCase())
   })
 }
 
@@ -54,8 +55,11 @@ function getRandomWord() {
 
 // RENDER FUNCTIONS
 function renderWord() {
+
   const wordEl = document.createElement('div')
-  wordEl.setAttribute('class', 'word')
+  wordEl.className = "word"
+
+  
 
   const rightGuesses = getRightGuesses()
 
@@ -129,6 +133,12 @@ function renderWinOrLostMessage() {
   }
 }
 
+function renderTheText(){
+  createSomeUsefulText()
+}
+
+
+
 function render() {
   document.body.innerHTML = ''
 
@@ -136,6 +146,35 @@ function render() {
   renderWrongGuesses()
   renderWinOrLostMessage()
 }
+
+function createSomeUsefulText(){
+  let projectName = document.createElement('h1')
+  projectName.textContent = 'Project name: Hangman'
+
+  let projectMentor = document.createElement('h1')
+  projectMentor.textContent = 'Mentor: Dr. Besmir Sejdiu'
+
+  let projectDescription = document.createElement('h2')
+  projectDescription.textContent = `Project description:`
+
+  let projectDescriptionText = document.createElement('h3')
+  projectDescriptionText.textContent = `A game where you try to guess the word before you run out of guesses.`
+
+  let projectDescriptionText2 = document.createElement('h2')
+  projectDescriptionText2.textContent = `Click down below to get started!`
+
+  let projectButton = document.createElement('button')
+  projectButton.className = 'project-button'
+  projectButton.textContent = 'Play'
+  projectButton.addEventListener('click', function () {
+    render()
+  }, {once: true})
+
+  
+  document.body.append(projectName, projectMentor, projectDescription, projectDescriptionText, projectDescriptionText2, projectButton)
+
+}
+
 
 function listenForKeypresses() {
   // Every time a letter is pressed, do something
@@ -153,5 +192,5 @@ function listenForKeypresses() {
   })
 }
 
-render()
-listenForKeypresses()
+  renderTheText()
+  listenForKeypresses()
