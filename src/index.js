@@ -140,10 +140,6 @@ function renderTheText(){
 
 function createBtn(){
 
-  let btnDiv = document.createElement('div')
-  btnDiv.className = 'btn-div'
-
-
   let btn = document.createElement('button')
   btn.className = "btn"
   btn.textContent = 'Back to the info!'
