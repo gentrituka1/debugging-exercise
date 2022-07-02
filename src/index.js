@@ -146,8 +146,7 @@ function createBtn(){
   btn.addEventListener('click', function () {
     renderTheText()
   }, {once: true})
-  btnDiv.append(btn)
-  document.body.append(btnDiv)
+  document.body.append(btn)
 }
 
 function render() {
