@@ -100,7 +100,7 @@ function renderWinOrLostMessage() {
     const lostSection = document.createElement('div')
 
     const messageEl = document.createElement('span')
-    messageEl.textContent = 'Sorry, you lost 🤕'
+    messageEl.textContent = 'Sorry, you lost🤕'
 
     const restartButton = document.createElement('button')
     restartButton.textContent = 'RESTART'
@@ -177,7 +177,6 @@ function createSomeUsefulText(){
   projectButton.className = 'project-button'
   projectButton.textContent = 'Play'
   projectButton.addEventListener('click', function () {
-
     render()
   }, {once: true})
 
