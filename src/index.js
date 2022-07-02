@@ -15,8 +15,7 @@ const words = [
 const state = {
   word: getRandomWord(),
   guesses: [],
-  maximumNumberOfWrongGuesses: 5,
-  page: 'info' || 'game'
+  maximumNumberOfWrongGuesses: 5
 }
 
 // Pyetjet qe duhet bere:
@@ -178,7 +177,7 @@ function createSomeUsefulText(){
   projectButton.className = 'project-button'
   projectButton.textContent = 'Play'
   projectButton.addEventListener('click', function () {
-    state.page = 'game'
+
     render()
   }, {once: true})
 
