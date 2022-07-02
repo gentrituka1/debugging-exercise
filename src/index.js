@@ -1,7 +1,7 @@
 const words = [
   'welcome',
   'kosova',
-  'Albania',
+  'albania',
   'banana',
   'besmir',
   'javascript',
@@ -83,7 +83,7 @@ function renderWrongGuesses() {
   spanEl.setAttribute('class', 'wrong-guesses')
 
   const wrongGuesses = getWrongGuesses()
-  spanEl.textContent = `Wrong guesses: ${wrongGuesses.join(' - ')} (${
+  spanEl.textContent = `Wrong guesses: ${wrongGuesses.join(',')} (${
     wrongGuesses.length
   })`
 
@@ -138,9 +138,10 @@ function renderTheText(){
 }
 
 
-
 function render() {
   document.body.innerHTML = ''
+
+  
 
   renderWord()
   renderWrongGuesses()
