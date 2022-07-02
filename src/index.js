@@ -1,13 +1,13 @@
 const words = [
-  'welcome',
+  'universiteti',
   'kosova',
   'albania',
-  'banana',
+  'fakulteti',
   'besmir',
   'javascript',
   'project',
   'random',
-  'gentrit',
+  'gentrit'
 ]
 
 
