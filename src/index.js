@@ -163,9 +163,6 @@ function createSomeUsefulText(){
   let projectName = document.createElement('h1')
   projectName.textContent = 'Project name: Hangman'
 
-  let projectMentor = document.createElement('h1')
-  projectMentor.textContent = 'Mentor: Dr. Besmir Sejdiu'
-
   let projectDescription = document.createElement('h2')
   projectDescription.textContent = `Project description:`
 
@@ -183,7 +180,7 @@ function createSomeUsefulText(){
   }, {once: true})
 
   
-  document.body.append(projectName, projectMentor, projectDescription, projectDescriptionText, projectDescriptionText2, projectButton)
+  document.body.append(projectName, projectDescription, projectDescriptionText, projectDescriptionText2, projectButton)
 
 }
 
