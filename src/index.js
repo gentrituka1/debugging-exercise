@@ -12,6 +12,7 @@ const words = [
 
 
 // STATE
+
 const state = {
   word: getRandomWord(),
   guesses: [],
@@ -74,7 +75,6 @@ function renderWord() {
 
     wordEl.append(letterEl)
   }
-
   document.body.append(wordEl)
 }
 
