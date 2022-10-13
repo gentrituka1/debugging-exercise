@@ -1,0 +1,16 @@
+.product {
+  border: 1px solid lightgray;
+  padding: 20px;
+  width: 300px;
+}
+
+.product img {
+  max-height: 50px;
+  /* width: 100%; */
+  max-width: 100px;
+  padding-right: 10px;
+}
+
+.product__content {
+  display: flex;
+}
