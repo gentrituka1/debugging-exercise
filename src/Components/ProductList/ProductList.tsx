@@ -6,12 +6,14 @@ type Props = {
   products: ProductType[]
 }
 
-const ProductList = (props: Props) => {
+const ProductList = ({products}: Props) => {
   return (
     <div>
-      {props.products.map(product =>
+      {products ? products.map((product: ProductType) =>
         <Product product={product} />
-      )}
+      )
+    :
+      <p>There are no products</p>}
     </div>
   )
 }

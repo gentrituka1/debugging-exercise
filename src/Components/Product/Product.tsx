@@ -16,7 +16,7 @@ const Product = ({ product }: Props) => {
       key={product.id}
       className="product"
       role="button"
-      onChange={() => handleToggleFold()}
+      onChange={() => handleToggleFold}
     >
       <div className="product__content">
         <img src={product.thumbnail} alt={product.title} />

@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="App product__list">
-      <h2>{gK('products_title')}</h2>
+      <h2>{gK('products_title', "en")}</h2>
       <ProductList products={products} />
     </div>
   )
