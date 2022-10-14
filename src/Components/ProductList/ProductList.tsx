@@ -1,12 +1,12 @@
 import { Product as ProductType } from '../../utils/types'
-import Product from '../Product';
+import Product from '../Product/Product';
 import './style.css';
 
 type Props = {
-  products: ProductType[] | null;
+  products: ProductType[]
 }
 
-const ProductList = (props) => {
+const ProductList = (props: Props) => {
   return (
     <div>
       {props.products.map(product =>

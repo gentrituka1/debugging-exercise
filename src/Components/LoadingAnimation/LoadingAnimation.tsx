@@ -3,9 +3,11 @@ import './style.css';
 /*
 Animation displayed before fetch concludes
 */
-const LoadingAnimation = () =>
+function LoadingAnimation (){
+  return (
   <div className='loadingAnimation'>
     <img src={loading} width={300} />
   </div>
-
+  )
+}
 export default LoadingAnimation;

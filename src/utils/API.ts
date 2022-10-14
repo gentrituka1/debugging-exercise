@@ -6,3 +6,5 @@ const API = "https://dummyjson.com/prducts";
   Creates a full simple CRUD - yep, we built this monster together in a session a month ago 😊
 */
 export const { getAll } = createCrud(API);
+
+

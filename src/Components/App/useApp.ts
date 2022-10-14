@@ -22,7 +22,7 @@ const useApp = () => {
 
   React.useEffect(() => {
     init();
-    return () => console.log("Thank you fo using our products");
+    return () => console.log("Thank you for using our products");
   }, []);
 
   return {
