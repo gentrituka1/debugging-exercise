@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Product as ProductType } from '../../utils/types'
 import useProduct from './useProduct';
 import './style.css';
+import { gK, strings } from '../../utils/strings-english';
 
 type Props = {
   product: ProductType;
@@ -15,8 +16,7 @@ const Product = ({ product }: Props) => {
       key={product.id}
       className="product"
       role='button'
-      // TODO: break
-      onClick={() => handleToggleFold()}
+      onChange={() => handleToggleFold}
     >
       <div className="product__content">
         <img src={product.thumbnail} alt={product.title} />
@@ -25,7 +25,7 @@ const Product = ({ product }: Props) => {
         </p>
       </div>
 
-      {isUnfolded ? <span>{product.description}</span> : <p>'More...'</p>}
+      {isUnfolded ? <span>{product.description}</span> : <p>{gK('more')}</p>}
     </div>
   )
 }

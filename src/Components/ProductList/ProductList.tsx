@@ -9,9 +9,7 @@ type Props = {
 const ProductList = (props) => {
   return (
     <div>
-      {/* TODO: kill the ? , rename to products */}
-      {/* @ts-ignore */}
-      {props.products?.map(product =>
+      {props.products.map(product =>
         <Product product={product} />
       )}
     </div>

@@ -11,5 +11,3 @@ export type Product = {
   thumbnail: string;
   images: string[];
 };
-
-export type NewItemType = { title: Product["title"] } & Partial<Product>;
